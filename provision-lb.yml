@@ -1,0 +1,9 @@
+---
+- name: configure a load balancer
+  hosts: all
+  become: true
+  tasks:
+    - name: ensure haproxy is present
+      yum:
+        name: haproxy
+        state: present
